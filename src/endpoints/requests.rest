@@ -1,0 +1,35 @@
+@baseUrl = http://localhost:5000
+
+### Health Check
+GET {{baseUrl}}/health
+Accept: application/json
+
+### Get Reachable URLs (With Body)
+POST {{baseUrl}}/api/urls/reachable
+Content-Type: application/json
+
+{
+  "urls": [
+    { "url": "https://example.com", "priority": 1 },
+    { "url": "https://another-example.com", "priority": 2 }
+  ]
+}
+
+### Get Reachable URLs (No Body)
+POST {{baseUrl}}/api/urls/reachable
+Content-Type: application/json
+
+### Get Reachable URLs by Priority (With Body)
+POST {{baseUrl}}/api/urls/reachable/2
+Content-Type: application/json
+
+{
+  "urls": [
+    { "url": "https://example.com", "priority": 1 },
+    { "url": "https://another-example.com", "priority": 2 }
+  ]
+}
+
+### Get Reachable URLs by Priority (No Body)
+POST {{baseUrl}}/api/urls/reachable/2
+Content-Type: application/json

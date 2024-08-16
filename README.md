@@ -24,14 +24,9 @@ Clone this repository to your local machine using the following command:
 git clone https://github.com/DuyHau3314/reachable-urls.git
 ```
 
-### 2. Navigate to the Project Directory
-```bash
-cd backend
-```
-
 ### 3. Copy the Environment Variables
 ```bash
-cp env.example .env
+cp -p .env.example .env
 ```
 
 # Running the Application
@@ -41,7 +36,7 @@ cp env.example .env
 ### 1. Build and Run the Application
 ```bash
 docker build -t backend:latest .
-docker run -d -p 3000:3000 --name backend backend:latest
+docker run -d -p 5000:5000 --name backend backend:latest
 ```
 
 ### 2. Stopping the Application
