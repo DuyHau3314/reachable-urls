@@ -3,6 +3,7 @@ import 'express-async-errors';
 import urlRoutes from './routes/urlRoutes';
 import { errorHandler } from './middlewares/errorHandler';
 import { appEndpoints } from './constant/endpoint';
+import { HttpStatusCode } from './constant/HttpStatusCodes';
 
 const app = express();
 
@@ -15,8 +16,8 @@ app.get('/health', (_req, res) => {
 app.use('/api', urlRoutes);
 
 // Handle Not Found routes
-app.use((req, res, next) => {
-  res.status(404).json({
+app.use((_req, res, next) => {
+  res.status(HttpStatusCode.NOT_FOUND).json({
     error: 'Not Found',
     message: 'The requested endpoint does not exist.',
     appEndpoints
