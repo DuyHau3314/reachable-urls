@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "f2dcbc0a-a6a5-4fb6-b892-23e41e64692b",
+		"name": "Reachable Urls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33071952"
+	},
+	"item": [
+		{
+			"name": "List reachable urls",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/urls/reachable",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"urls",
+						"reachable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reachable url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/urls/reachable",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"urls",
+						"reachable"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
